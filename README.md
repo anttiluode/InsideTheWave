@@ -8,10 +8,9 @@ Could the geometry of such an observer make its inferred world look quantum-like
 
 ## Read the paper
 
-- [Paper PDF](docs/paper.pdf)
-- [Readable Markdown manuscript](docs/paper.md)
-- [LaTeX source](docs/paper.tex)
-- [Calculation checks and source provenance](docs/verification.md)
+- [Paper PDF](InsideTheWave-paper.pdf)
+
+The repository currently includes the PDF, this README and the license. Editable manuscript, LaTeX, figure and calculation-check sources are not included.
 
 **Paper title:** *Inside the Wave: State-Carrying Neural Pings, Delayed Observers, and Quantum-Like Inference*.
 
@@ -59,29 +58,15 @@ The original preprint is cited rather than redistributed. The paper's references
 
 At the inspected commit, a three-position smoke test suggested receiver-specific sensitivity, while the first literal cosine history-query experiment was negative: present-only retrieval scored 1.000 top-1 accuracy; adding the real history coordinate scored 0.333. These are existing repository results, not new runs for this paper.
 
+The later [same-present history assay](https://github.com/anttiluode/ChessFlyStatePings/blob/main/results/same-present-history-20261002.md) holds the present input and delayed ping identical across opposite retained cue histories. The responses differ, but continuation targeting fails its declared gate: 13/24 policy pairings (54.2%), 68.2% matched-control percentile, and negative average native alignment. This follow-up is reported separately; the uploaded paper retains its original inspected-commit result.
+
 The distinction matters: **carrying history, making it readable, and using it as a retrieval address are separate claims.** Neither outcome proves or disproves consciousness or the physical conjecture discussed here.
 
 ## Proposed next tests
 
 The paper proposes five inexpensive stages: matched-budget state-message decoding; controlled delay-phase interference; query-order comparisons against classical memory models; slow-world and delay-calibration limits; and observer replacement using identical preserved records.
 
-These stages are not implemented in this repository. Their scientific outcomes remain unknown. The included figure shows analytic examples, and the calculation checks verify arithmetic and algebra only.
-
-## Build the PDF
-
-The PDF is already included. To rebuild from the included LaTeX source, use a TeX installation with pdfLaTeX and the packages named in `docs/paper.tex`:
-
-```bash
-cd docs
-pdflatex -interaction=nonstopmode -halt-on-error paper.tex
-pdflatex -interaction=nonstopmode -halt-on-error paper.tex
-```
-
-The included `figures/observer-delay.png` supplies the figure. `paper.md` is the editable manuscript. To regenerate the styled LaTeX from Markdown, install Pandoc and run this from `docs`, then run the two pdfLaTeX passes above:
-
-```bash
-pandoc paper.md --from=markdown+tex_math_dollars --to=latex --standalone --shift-heading-level-by=-1 --resource-path=. -V documentclass=article -V fontsize=11pt -V papersize=a4 -V geometry:margin=24mm -V linestretch=1.0 -V colorlinks=true -H paper-header.tex -o paper.tex
-```
+These stages are not implemented in this repository. Their scientific outcomes remain unknown. The paper's worked examples and figure are analytic illustrations rather than new experimental measurements.
 
 ## Authorship and claim boundary
 
